@@ -1,0 +1,91 @@
+/* for the panel header */
+.panel-heading {
+    overflow: hidden;
+}
+
+.panel-heading progress {
+    margin-right: 10px;
+}
+
+.panel-heading button {
+    font-size: 80%;
+    padding:   3px 6px;
+}
+
+/* for link in the table row */
+.table-hover > tbody > tr.link:hover {
+    cursor: pointer;
+}
+
+/* for nav-header */
+.nav > li.nav-header > a {
+    padding-left:   0;
+    cursor:         default;
+    color:          #999;
+    font-size:      large;
+    font-weight:    bold;
+    text-transform: uppercase;
+}
+
+/* for the footer */
+html,
+body {
+    height: 100%;
+}
+
+#wrap {
+    min-height: 100%;
+    height:     auto !important;
+    height:     100%;
+    margin:     0 auto -60px;
+}
+
+#push,
+#footer {
+    height: 60px;
+}
+
+#footer {
+    background-color: #f5f5f5;
+}
+
+#wrap > .container {
+    padding: 60px 15px 0;
+}
+
+.container .credit {
+    margin: 20px 0;
+}
+
+#footer > .container {
+    padding-left:  15px;
+    padding-right: 15px;
+}
+
+/* for the sidemenu */
+#menu.affix {
+    position: static;
+}
+
+@media (min-width: 992px) {
+    #menu.affix,
+    #menu.affix-bottom {
+        width: 213px;
+    }
+
+    #menu.affix {
+        top:      80px;
+        position: fixed;
+    }
+
+    #menu.affix-bottom {
+        position: absolute;
+    }
+}
+
+@media (min-width: 1200px) {
+    #menu.affix,
+    #menu.affix-bottom {
+        width: 263px;
+    }
+}

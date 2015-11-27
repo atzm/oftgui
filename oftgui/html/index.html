@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>oftgui</title>
+
+    <!--[if lt IE 9]>
+    <script src="lib/html5shiv/html5shiv.js"></script>
+    <script src="lib/respond/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- jQuery -->
+    <script src="lib/jquery/jquery.js"></script>
+
+    <!-- Bootstrap -->
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Plugins -->
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- D3 -->
+    <script src="lib/d3/d3.v3.min.js" charset="utf-8"></script>
+
+    <!-- oftrace -->
+    <link href="oftrace.css" rel="stylesheet">
+    <script src="util.js"></script>
+    <script src="websocket.js"></script>
+    <script src="topology.js"></script>
+    <script src="layout.js"></script>
+    <script src="oftrace.js"></script>
+  </head>
+
+  <body onload="oftrace.main();">
+    <div id="wrap">
+      <!-- header -->
+      <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+          <ol class="breadcrumb" id="breadcrumb"></ol>
+        </div>
+      </nav>
+
+      <!-- body -->
+      <div class="container">
+        <div class="row">
+          <!-- sidebar -->
+          <div class="col-md-3">
+            <nav class="navbar" role="navigation">
+              <ul class="nav nav-pills nav-stacked" data-spy="affix" id="menu"></ul>
+            </nav>
+          </div>
+
+          <!-- main -->
+          <div class="col-md-9">
+            <div class="page-header">
+              <h1>
+                oftgui <small>openflow traceroute</small>
+                <button id="clear-button" class="btn btn-default pull-right">
+                  <span class="glyphicon glyphicon-erase"></span>
+                </button>
+              </h1>
+            </div>
+            <div id="main"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- padding for footer -->
+      <div id="push"></div>
+    </div>
+
+    <!-- modal -->
+    <div class="modal fade" id="x-modal">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title">
+              <span id="x-modal-title"></span>
+              <progress class="pull-right" id="x-modal-progress"/>
+            </h4>
+          </div>
+          <div class="modal-body" id="x-modal-body">
+          </div>
+          <div class="modal-footer" id="x-modal-footer">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <div id="footer">
+      <div class="container">
+        <p class="text-muted credit"></p>
+      </div>
+    </div>
+  </body>
+</html>
