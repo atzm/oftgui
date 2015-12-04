@@ -23,7 +23,7 @@ setup(
     install_requires=[
         'setuptools-git',
         'ryu>=3.26',
-        'oftrace',
+        'oftroute',
     ],
     keywords=['network', 'ryu', 'openflow', 'traceroute'],
     classifiers=[

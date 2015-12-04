@@ -1,6 +1,6 @@
 Introduction
 ============
-oftgui is a Web frontend for `oftrace <https://github.com/atzm/oftrace>`_.
+oftgui is a Web frontend for `oftroute <https://github.com/atzm/oftroute>`_.
 This provides graphical user interface for traceroute using topology detection
 application built in `Ryu <http://osrg.github.io/ryu/>`_.
 

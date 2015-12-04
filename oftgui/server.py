@@ -31,7 +31,7 @@ class Controller(ryu.app.wsgi.ControllerBase):
         return self.app(req)
 
 
-ryu.base.app_manager.require_app('oftrace.flow')
-ryu.base.app_manager.require_app('oftrace.trace')
+ryu.base.app_manager.require_app('oftroute.flow')
+ryu.base.app_manager.require_app('oftroute.trace')
 ryu.base.app_manager.require_app('ryu.app.rest_topology')
 ryu.base.app_manager.require_app('ryu.app.ws_topology')

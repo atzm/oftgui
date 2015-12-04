@@ -1,10 +1,10 @@
 'use strict';
 
-var oftrace = (function() {
+var oftroute = (function() {
     var PacketData = null;
 
     var openFlowEntriesModal = function(dpid) {
-        var path  = '/oftrace/switches/' + dpid + '/flows';
+        var path  = '/oftroute/switches/' + dpid + '/flows';
         var modal = new layout.ModalManager([
             '<span class="glyphicon glyphicon-transfer"></span> ',
             'Flow Entries > ' + dpid,
@@ -214,7 +214,7 @@ var oftrace = (function() {
                     return;
                 }
 
-                var path  = '/oftrace/probes';
+                var path  = '/oftroute/probes';
                 var prreq = JSON.stringify({data: packet});
                 var streq = JSON.stringify({dpid: dpid, port: port});
 
@@ -229,10 +229,10 @@ var oftrace = (function() {
                         var result = JSON.parse(r.response);
                         var ppath  = path + '/' + result.id;
                         var wsurl  = 'ws://' + location.host +
-                            '/oftrace/snoop' + '/' + result.id;
+                            '/oftroute/snoop' + '/' + result.id;
 
                         var wsmgr = new websocket.WebSocketManager(wsurl, {
-                            'oftrace.ProbeIn': function(params) {
+                            'oftroute.ProbeIn': function(params) {
                                 handler(params);
                             },
                         });
@@ -274,7 +274,7 @@ var oftrace = (function() {
                 return;
             }
 
-            d3.json('/oftrace/switches/' + dpid, function(e, data) {
+            d3.json('/oftroute/switches/' + dpid, function(e, data) {
                 modal.clearBody();
                 createModal(data);
             });
